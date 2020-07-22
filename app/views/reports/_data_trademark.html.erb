@@ -1,0 +1,25 @@
+<div class="container">
+
+<table class="table">
+<thead class="thead-dark">
+  <tr>
+    <th>CANTIDAD DE PRODUCTOS</th>
+    <th>MARCA</th>
+   
+    
+  
+  </tr>
+</thead>
+
+<tbody>
+  <% @data.each do |product| %>
+    <tr>
+      <td class="text-center"><%= product[0] %></td>
+      <td><%= product[1] %></td>
+
+  
+    </tr>
+  <% end %>
+</tbody>
+</table>
+</div>

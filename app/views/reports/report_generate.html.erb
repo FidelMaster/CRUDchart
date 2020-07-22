@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="card" style="margin-top: 25px;">
+        <div class="card-header">
+          REPORTE DE PROVEEDORES POR PRODUCTO
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Detalle:</h5>
+            <p class="card-text">Este reporte tiene la finalidad de mostrar un resumen de cuantos productos ha realizado<br> los proveedores</p>
+            <%=link_to "Generar", send_report_reports_path(scenario: 1,title: "REPORTE DE PROVEEDORES POR PRODUCTOS"),class:"btn btn-primary"%>
+
+    
+           
+        </div>
+    </div>
+    <div class="card" style="margin-top: 25px;">
+        <div class="card-header">
+            REPORTE DE MARCAS POR PRODUCTOS
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Detalle:</h5>
+            <p class="card-text">Este reporte tiene la finalidad de mostrar un resumen de cuantos productos se tienen<br> de las marcas realizadas en el sistema</p>
+            <%=link_to "Generar", send_report_reports_path(:scenario => 2,:title =>"REPORTE DE MARCAS POR PRODUCTOS"),class:"btn btn-primary"%>
+
+          
+        
+        </div>
+    </div>
+</div>

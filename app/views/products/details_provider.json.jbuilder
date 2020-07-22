@@ -1,0 +1,1 @@
+json.details_provider @details

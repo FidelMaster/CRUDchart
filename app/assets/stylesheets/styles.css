@@ -1,0 +1,65 @@
+ /* En este archivo van los estilos y animatciones  */
+
+ /* esto es un selector ira a buscar la clase contenedor en mi html */
+ .contenedor{
+    /* le doy un ancho y un alto y le asigno color al borde  y establezco la propiedad animation que va a invocar al keyframe*/
+    width: auto;
+    height: 100px;
+    border: 0.5px solid blue;
+    margin: auto;
+    background-size: 100% 100%;
+
+    /* dicha propiedad busca el keyframe llamado contenedor y le da un tiempo de transicion de unos 6 segundos  */
+    animation: contenedor 6s infinite; 
+}
+
+
+/* Dicho componente me ayuda a establecer las imagenes que utilizare y cada porcentaje representa a la animacion */
+@keyframes contenedor {
+/* Todas las imagenes se encuentran  en mi archivo public de mi apop */
+    
+/* el 30% de la animacion  la comprendera la imagen 1  */
+    0%, 30%{
+            background-image: url("logo.jpg");
+            opacity: 1;
+            
+    }
+
+    35%, 65%{
+        opacity: 1;
+        background-image: url("logo2.png");
+    }
+
+70%, 100%{
+
+        background-image: url("logo3.png");
+        opacity: 1;
+    }
+
+    /* Dicho porcentaje se distribuyo equitativamente en las 3 img */
+}
+
+ /* darle color al titulo */
+.titulo{
+    margin: 0 px;
+    background-color: dimgrey;
+}
+
+.t{
+    color: floralwhite;
+}
+/*Alineacion de los graficos, me auxilie de flexbox*/
+.grafico {
+    display: flex;
+    justify-content: space-between;
+  }
+/*Darle al footer  que se mantenga estatico */
+
+footer {
+    text-align: center;
+    font-family: sans-serif;
+    color: whitesmoke;
+    width: 100%;
+    bottom: 0;
+    position:fixed;
+}

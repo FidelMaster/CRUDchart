@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 10px;">
+  <div class="card">
+    <h1 class="card-header"> <%=  @presentation.description %></h1>
+
+    <div class="card-body">
+
+      <p>
+        <strong>Id:</strong>
+        <%= @presentation.id %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @presentation.description %>
+      </p>
+
+      <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
+      <%= link_to 'Back', presentations_path %>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>

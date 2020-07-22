@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 10px;">
+  <div class="card">
+    <h1 class="card-header"> <%= @tradmark.description %></h1>
+
+    <div class="card-body">
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>Id:</strong>
+        <%= @tradmark.id %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @tradmark.description %>
+      </p>
+
+      <%= link_to 'Edit', edit_tradmark_path(@tradmark) %> |
+      <%= link_to 'Back', tradmarks_path %>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>

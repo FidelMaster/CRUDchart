@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 10px;">
+  <div class="card">
+    <h1 class="card-header"> <%= @product.description %></h1>
+    <div class="card-body">
+      <p>
+        <strong>Id:</strong>
+        <%= @product.id %>
+      </p>
+
+      <p>
+        <strong>Proveedor:</strong>
+        <%= @product.id_provider %>
+      </p>
+
+      <p>
+        <strong>Presentacion:</strong>
+        <%= @product.id_presentation %>
+      </p>
+
+      <p>
+        <strong>Marca:</strong>
+        <%= @product.id_trademark %>
+      </p>
+
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <%= link_to 'Back', products_path %>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>

@@ -1,0 +1,62 @@
+<%= form_for(product) do |f| %>
+<% if product.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+  <ul>
+    <% product.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+
+
+<div class="field">
+
+  <%= f.label :id_provider, :class=>"control-label text-left" do %>
+  Proveedor
+  <%end%>
+  <%= f.collection_select :id_provider, Provider.all, :id, :description, {:include_blank => true},{:class=>"select2_single form-control", :tabindex=>"-1",:required=>"required"} %>
+
+</div>
+
+<div class="field">
+  <%= f.label :id_presentation, :class=>"control-label text-left" do %>
+  Presentacion
+  <%end%>
+  <%= f.collection_select :id_presentation, Presentation.all, :id, :description, {:include_blank => true},{:class=>"select2_single form-control", :tabindex=>"-1",:required=>"required"} %>
+
+</div>
+
+<div class="field">
+  <%= f.label :id_trademark, :class=>"control-label text-left" do %>
+  Marca
+  <%end%>
+  <%= f.collection_select  :id_trademark, Tradmark.all, :id, :description, {:include_blank => true},{:class=>"select2_single form-control", :tabindex=>"-1",:required=>"required"} %>
+
+
+</div>
+<div class="field">
+  <%= f.label :description, :class=>"control-label text-left" do %>
+  Descripcion
+  <%end%>
+  <%= f.text_field :description %>
+
+
+</div>
+<div class="field">
+  <%= f.label :price, :class=>"control-label text-left" do %>
+ Precio
+  <%end%>
+  <%= f.text_field :price %>
+
+
+</div>
+
+<div class="actions">
+  <button type="submit" class="btn-primary">Crear</button>
+     
+</div>
+<% end %>

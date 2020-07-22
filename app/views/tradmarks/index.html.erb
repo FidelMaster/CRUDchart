@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+
+  <h1>MARCAS</h1>
+  
+
+  <%= link_to 'Agregar', new_tradmark_path %>
+  
+</div>
+<div class="container">
+  <table class="table">
+
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tradmarks.each do |tradmark| %>
+        <tr>
+          <td><%= tradmark.id %></td>
+          <td><%= tradmark.description %></td>
+          <td><%= link_to 'Show', tradmark %></td>
+          <td><%= link_to 'Edit', edit_tradmark_path(tradmark) %></td>
+          <td><%= link_to 'Destroy', tradmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  
+  </table>
+</div>
+
+
+

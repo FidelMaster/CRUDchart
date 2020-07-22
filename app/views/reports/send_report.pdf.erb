@@ -1,0 +1,86 @@
+<!doctype html>
+
+
+
+<html>
+
+
+
+<head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    <%= wicked_pdf_stylesheet_link_tag "asistencia" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" -%>
+     <style>
+        .alwaysbreak { page-break-before: always; }
+        .nobreak:before { clear:both; }
+        .nobreak { page-break-inside: avoid; }
+        thead { display: table-header-group }
+        tfoot { display: table-row-group }
+        tr { page-break-inside: avoid }
+        td {
+             padding: 10px; text-align: right; 
+             border: 1px solid #ddd;}
+        th  { 
+            border: 1px solid #ddd; 
+        border-right: 1px solid #ddd;
+        }
+    </style>
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+
+
+
+<body onload='number_pages()'>
+
+<div class="row">
+  <div class="col-xs-3">
+  
+ 
+  </div>
+  <div class="col-xs-9 ">
+     <h2><strong>  <%= @tittle  %></strong></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="container text-center">
+        <div class="col-xs-12">
+         <h4> </h4>
+        </div>
+       
+  </div>
+  
+</div>
+
+
+
+
+
+<div class="row" style="margin-top:10px;">
+       
+   <% if @scenerario == 1 %>
+       <%= render partial:'data_provider', :formats=>[:html] %>     
+   <% end %>
+    <% if @scenerario == 2 %>
+          <%= render partial:'data_trademark', :formats=>[:html] %>
+    <% end %> 
+ 
+
+  
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+
+  <h1>PRESENTACION DEL PRODUCTO</h1>
+  
+
+
+  <%= link_to 'Agregar', new_presentation_path %>
+
+</div>
+<div class="container">
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @presentations.each do |presentation| %>
+        <tr>
+          <td><%= presentation.id %></td>
+          <td><%= presentation.description %></td>
+          <td><%= link_to 'Show', presentation %></td>
+          <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
+          <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+</div>
+<br>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<div class="container" style="margin-top: 10px;">
+  <div class="card">
+    <h1 class="card-header"> <%=@provider.description  %></h1>
+
+    <div class="card-body">
+
+      <p>
+        <strong>Id:</strong>
+        <%= @provider.id %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @provider.description %>
+      </p>
+
+      <%= link_to 'Edit', edit_provider_path(@provider) %> |
+      <%= link_to 'Back', providers_path %>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>

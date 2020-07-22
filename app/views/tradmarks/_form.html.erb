@@ -1,0 +1,25 @@
+<%= form_for(tradmark) do |f| %>
+  <% if tradmark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tradmark.errors.count, "error") %> prohibited this tradmark from being saved:</h2>
+
+      <ul>
+      <% tradmark.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <button type="submit" class="btn-primary">Crear</button>
+     
+  </div>
+<% end %>
